@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import Ch36A.Dto.SessionDto;
+
 public class CommonDao {
 	protected Connection conn =null;
 	protected PreparedStatement pstmt = null;
@@ -35,5 +37,7 @@ public class CommonDao {
 	public void freeConnection(PreparedStatement pstmt,ResultSet rs) throws SQLException {
 		rs.close();
 		pstmt.close(); 
-	}	
+	}
+
+		
 }

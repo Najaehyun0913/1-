@@ -5,9 +5,11 @@ import java.util.Map;
 
 import Ch36A.Dto.MemberDto;
 import Ch36A.Service.MemberServiceImpl;
+import Ch36A.Service.memberService;
 
 public class Membercontroller implements SubController{
-	private MemberServiceImpl service;
+	private memberService service;
+	
 	public Membercontroller() {
 		try {
 			service=new MemberServiceImpl();
@@ -34,7 +36,7 @@ public class Membercontroller implements SubController{
 //			3.서비스 실행
 			boolean isREgistred=false;
 			try {
-				isREgistred=service.memberRegister(dto);
+				isREgistred=service.memberJoin(dto);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -119,12 +121,65 @@ public class Membercontroller implements SubController{
 //			Map<String,Object> result=new HashMap();
 //			result.put("response", isREgistred);
 			//selectOne
+		}else if(serviceNo==6) {
+//			1.파라미터받기
+			String username=(String)params.get("username");
+			String password=(String) params.get("password");
+			Integer sessionId=(Integer) params.get("id");
+//			2.데이터 입력값 검증
+			if(!isValid(username,password,sessionId)) {
+				return null;
+			}
+//			3.서비스 검증
+			Map<String,Object> response=new HashMap();
+			try {
+				service.login(username, password, serviceNo);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+//			4.뷰로 이동
+			System.out.println("로그인성공");
+			return response;
+			
+		}else if(serviceNo==7) {
+//			1.파라미터받기
+			Integer sessionId=(Integer) params.get("sessionId");
+			
+//			2.입력값 검증
+			Map<String,Object> response=null;
+			if(!isValid(sessionId)) {
+				response.put("response", false);
+				response.put("msg", "Data Validation check error.. ");
+				return response;
+			}
+//			3.서비스 검증
+			try {
+				service.logout(sessionId);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+//			4.뷰로 이동
+			System.out.println("로그아웃 성공");
+			return response;
+			
 		}
 			
 		
 		return null;
 	}
-	private boolean isValid(MemberDto dto) {
+	private boolean isValid(Integer sessionId) {
+		// TODO Auto-generated method stub
 		return true;
+	}
+
+	private boolean isValid(String username, String password, Integer sessionId) {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	private boolean isValid(MemberDto dto) {
+		return false;
 	}
 }

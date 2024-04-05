@@ -3,12 +3,9 @@ package Ch36A.Controller;
 import java.util.HashMap;
 import java.util.Map;
 
-import Ch36.Controller.UserController;
-import Ch36.Controller.SubController;
-
 public class FrontController {
 	private Map<String,SubController> map=new HashMap();
-	FrontController(){
+	public FrontController(){
 		System.out.println("FrontController()");
 		init();
 	}
@@ -18,7 +15,7 @@ public class FrontController {
 //		/book-BookController
 //		/member-MemberController
 //		/lend -LendController
-		map.put("/admin", new UserController());
+		map.put("/member", new Membercontroller());
 		
 	}
 	public Map<String,Object> execute(String url,int serviceNo,Map<String,Object> params){

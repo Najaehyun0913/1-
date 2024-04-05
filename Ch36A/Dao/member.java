@@ -20,5 +20,7 @@ public interface member {
 
 	//		selectOne
 	MemberDto select(int membercode) throws Exception;
+	
+	MemberDto seleect(String username) throws Exception;
 
 }

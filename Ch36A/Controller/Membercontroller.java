@@ -86,22 +86,23 @@ public class Membercontroller implements SubController{
 			
 		}else if(serviceNo==4) {
 			//select all
-//			MemberDto dto=(MemberDto)params.get("MemberDto");
-//			System.out.println("[sc]MemberController's selectAll.."+dto);
-////			2.유효성체크
-//			if( !isValid(dto) ) 
-//				return null;
-////			3.서비스 실행
-//			boolean isREgistred=false;
-//			try {
-//				isREgistred=service.getAllmebers();
-//			} catch (Exception e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-////			4.뷰로 전달 or 이동
-//			Map<String,Object> result=new HashMap();
-//			result.put("response", isREgistred);
+			//select all
+			MemberDto dto=(MemberDto)params.get("MemberDto");
+			System.out.println("[sc]MemberController's selectAll.."+dto);
+//			2.유효성체크
+			if( !isValid(dto) ) 
+				return null;
+//			3.서비스 실행
+			List<MemberDto> isREgistred=new ArrayList();
+			try {
+				isREgistred=service.getAllmembers();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+//			4.뷰로 전달 or 이동
+			Map<String,Object> result=new HashMap();
+			result.put("response", isREgistred);
 			//selectAll
 		}else if(serviceNo==5) {
 //			MemberDto dto=(MemberDto)params.get("MemberDto");

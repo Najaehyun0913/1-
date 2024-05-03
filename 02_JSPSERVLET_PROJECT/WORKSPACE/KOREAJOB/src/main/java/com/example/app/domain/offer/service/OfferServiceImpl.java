@@ -11,7 +11,7 @@ import com.example.app.domain.common.dto.UserDto;
 import com.example.app.domain.offer.dao.OfferDaoImpl;
 import com.example.app.domain.offer.dto.OfferDto;
 
-public class OfferServiceImpl {
+public class OfferServiceImpl implements OfferService {
 
 	private OfferDaoImpl offerDaoImpl;
 	private UserDaoImpl userDaoImpl;
@@ -40,8 +40,7 @@ public class OfferServiceImpl {
 		Map<String,Object> returnValue =new HashMap();
 		connectionPool.txStart();
 		//작업위치
-		
-		//기존계정명에서 일치하는 계정이 있는지 확인
+
 		UserDto existingUser = getUser(newUser.getId());
 		if(existingUser != null) {
 	        returnValue.put("response", false);
@@ -64,52 +63,51 @@ public class OfferServiceImpl {
 			
 		return returnValue;
 	}
-	
-	
-
 
 
 
 	//회원탈퇴
-//	public Map<String,Object> remove() throws Exception{
-//		Map<String,Object> returnValue =new HashMap();
-//		connectionPool.txStart();	
-//	
-//		//작업위치
-//		boolean success = offerDaoImpl.remove(id받으면될듯..); // 회원 삭제 메서드 호출
-//		if (success) {
-//            returnValue.put("success", true);
-//            returnValue.put("message", "회원 탈퇴에 성공하였습니다.");
-//        } else {
-//            returnValue.put("success", false);
-//            returnValue.put("message", "회원 탈퇴에 실패하였습니다.");
-//        } 
-//				
-//		connectionPool.txCommit();
-//	
-//
-//		return returnValue;
-//	}
-	
-	
-	//이력서 등록
-//	public Map<String,Object> addResume() throws Exception{
-//		Map<String,Object> returnValue =new HashMap();
-//		connectionPool.txStart();
-//		
-//		//작업위치
-//		
-//		connectionPool.txCommit();
-//		return returnValue;
-	
-	
-	private UserDto getUser(String id) throws Exception{
-		connectionPool.txStart();
-		UserDto userDto =  userDaoImpl.Select(id);
-		connectionPool.txCommit();
-		return userDto;
+	public boolean remove(String offername) throws Exception {
+	    boolean success = false;
+	    connectionPool.txStart();    
+
+	    OfferDto offerToRemove = getUser(offername);
+	    if(offerToRemove == null) {
+	        connectionPool.txRollBack();
+	        return false; 
+	    }
+
+	    success = offerDaoImpl.Remove(offerToRemove.getId());
+	    if (success) {
+	        connectionPool.txCommit();
+	    } else {
+	        connectionPool.txRollBack();
+	    } 
+
+	    return success;
 	}
 	
+	@Override
+	public OfferDto getUser(String offername) throws Exception {
+		connectionPool.txStart();
+		OfferDto offerDto =  offerDaoImpl.Select(offername);
+		connectionPool.txCommit();
+		return offerDto;
+	}
+
+	public OfferDto getCompanyInfo() {
+		return null;
+	}
+
+
+	
+//	private UserDto getUser(String id) throws Exception{
+//		connectionPool.txStart();
+//		UserDto userDto =  userDaoImpl.Select(id);
+//		connectionPool.txCommit();
+//		return userDto;
+//	}
+//	
 }
 	
 

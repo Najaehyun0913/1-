@@ -72,23 +72,23 @@ public class OfferDaoImpl extends CommonDao implements OfferDao{
 	
 	//remove
 	//offername을 이용한 삭제 
-//	@Override
-//	public boolean Remove(OfferDto dto) throws Exception {
-//		System.out.println("DB Connected..");
-//		
-//		pstmt =	conn.prepareStatement("delete from user where OfferName=?");
-//		pstmt.setString(1, dto.getOfferName());
-//		
-//		
-//		int result =  pstmt.executeUpdate();
-//		
-//		if(result>0)
-//			System.out.println("REMOVE 성공");
-//		else
-//			System.out.println("REMOVE 실패");
-//		
-//		return result>0;
-//	}
+	@Override
+	public boolean Remove(OfferDto dto) throws Exception {
+		System.out.println("DB Connected..");
+		
+		pstmt =	conn.prepareStatement("delete from user where OfferName=?");
+		pstmt.setString(1, dto.getOfferName());
+		
+		
+		int result =  pstmt.executeUpdate();
+		
+		if(result>0)
+			System.out.println("REMOVE 성공");
+		else
+			System.out.println("REMOVE 실패");
+		
+		return result>0;
+	}
 	
 	//SELECT ONE
 	//DB명 offer offerName으로 단건 조회
@@ -131,20 +131,32 @@ public class OfferDaoImpl extends CommonDao implements OfferDao{
 		return list;
 	}
 	
+	public OfferDto getCompanyInfo() throws Exception{
+		OfferDto companyInfo = new OfferDto();
+		pstmt = conn.prepareStatement("SELECT * FROM company_info");
+		rs = pstmt.executeQuery();
+		if(rs.next()) {
+			companyInfo.setOfferName(rs.getString("offer_name"));
+			companyInfo.setOfferTel(rs.getString("offer_tel"));
+			companyInfo.setOfferAddress(rs.getString("offer_address"));
+		}
+		freeConnection(pstmt, rs);
+		return companyInfo;	
+	}
+	
+	
+	
 	
 	@Override
 	public OfferDto Select(String offername) throws Exception {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	@Override
 	public boolean Remove(String Id) throws Exception {
-		// TODO Auto-generated method stub
 		return false;
 	}
 	@Override
 	public boolean Update(String Id) throws Exception {
-		// TODO Auto-generated method stub
 		return false;
 	}
 	

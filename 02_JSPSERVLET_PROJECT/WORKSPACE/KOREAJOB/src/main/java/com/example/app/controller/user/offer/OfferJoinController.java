@@ -82,7 +82,7 @@ public class OfferJoinController implements SubController {
 		}
 
 	private boolean isValid(String id, String password) {
-		// TODO Auto-generated method stub
+
 		return true;
 	}
 

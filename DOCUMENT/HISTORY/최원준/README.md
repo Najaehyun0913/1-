@@ -1,4 +1,4 @@
-# 나재현_HISTORY
+# 최원준_HISTORY
 
 HISTORY
 ---

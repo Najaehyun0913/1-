@@ -73,18 +73,18 @@ DEPENDENCIES LIST
 ---
 |CAT|NAME|DESCRIPTION|LINK|-|-|
 |-|-|-|-|-|-|
-|FN|WEB|BOOT WEB|org.springframework.boot:spring-boot-starter-web|-|-|
-|FN|THYMELEAF|THYMELEAF|org.springframework.boot:spring-boot-starter-thymeleaf|-|-|
-|BN|LOMBOK|LOMBOK|org.projectlombok:lombok|-|-|
-|BN|SPRING_SECURITY|SPRING_SECURITY|org.springframework.boot:spring-boot-starter-security|-|-|
-|BN|SECURITY+THYMELEAF|SECURITY+THYMELEAF|org.thymeleaf.extras:thymeleaf-extras-springsecurity6|-|-|
-|BN|ORM_JPA|ORM_JPA|org.springframework.boot:spring-boot-starter-data-jpa|-|-|
-|BN|MAIL|MAIL|org.springframework.boot:spring-boot-starter-mail|-|-|
-|BN|DEVTOOLS|DEVTOOLS|org.springframework.boot:spring-boot-devtools|-|-|
-|BN|VALIDATOR|VALIDATOR|org.springframework.boot:spring-boot-starter-validation|-|-|
-|BN|OAUTH2-Client|OAUTH2-Client|org.springframework.boot:spring-boot-starter-oauth2-client|-|-|
-|BN|TX|TX|org.springframework:spring-tx|-|-|
-|DB|DBCONN BASIC|DBCONN BASIC|org.springframework.boot:spring-boot-starter-jdbc|-|-|
+|FN|WEB| BOOT WEB|org.springframework.boot:spring-boot-starter-web|-|-|
+|FN|THYMELEAF| THYMELEAF|org.springframework.boot:spring-boot-starter-thymeleaf|-|-|
+|BN|LOMBOK|LOMBOK| org.projectlombok:lombok|-|-|
+|BN|SPRING_SECURITY| SPRING_SECURITY|org.springframework.boot:spring-boot-starter-security|-|-|
+|BN|SECURITY+THYMELEAF| SECURITY+THYMELEAF|org.thymeleaf.extras:thymeleaf-extras-springsecurity6|-|-|
+|BN|ORM_JPA| ORM_JPA|org.springframework.boot:spring-boot-starter-data-jpa|-|-|
+|BN|MAIL| MAIL|org.springframework.boot:spring-boot-starter-mail|-|-|
+|BN|DEVTOOLS| DEVTOOLS|org.springframework.boot:spring-boot-devtools|-|-|
+|BN|VALIDATOR| VALIDATOR|org.springframework.boot:spring-boot-starter-validation|-|-|
+|BN|OAUTH2-Client| OAUTH2-Client|org.springframework.boot:spring-boot-starter-oauth2-client|-|-|
+|BN|TX| TX|org.springframework:spring-tx|-|-|
+|DB|DBCONN BASIC| DBCONN BASIC|org.springframework.boot:spring-boot-starter-jdbc|-|-|
 |DEVOPS|-|-|-|-|-|
 
 

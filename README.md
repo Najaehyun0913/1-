@@ -68,6 +68,15 @@ END POINT DOC
 |/seeker/resume/list|GET|---|String|---|
 |/seeker/delete|GET/POST|ID|String|---|
 |---|---|---|---|---|
+|/offer/join|GET|---|void|---|
+|---|---|---|---|---|
+|/offer/company/add|GET/POST|McodelAttribute<br>CompanyDto|void String|---|
+|/offer/company/read|GET|Model|void String|---|
+|/offer/company/delete|GET/POST|ID|String|---|
+|/offer/company/update|GET/POST|ModelAttribute<br>Company|void|---|
+|---|---|---|---|---|
+|/offer/jobopening/read|GET|---|void|---|
+|/offer/jobopening/add|GET/POST|---|void|---|
 
 DEPENDENCIES LIST
 ---

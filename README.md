@@ -59,18 +59,15 @@ END POINT DOC
 ---
 |URI|REQUEST METHOD|REQUEST PARAMETER TYPE|RESPONSE VALUE TYPE|DESCRIPTION|
 |---|---|---|---|---|
-|/user/join|POST|---|---|---|
-|/user/login|GET/POST|---|---|---|
-|/user/logout|POST|---|---|---|
+|/user/confirmid|GET/POST|NICKNAME POHNE TYPE|String|---|
+|/user/confirmpw|GET/POST|NICKNAME USERNAME PHONE|String|---|
 |---|---|---|---|---|
-|/seeker/join|---|---|---|---|
-|/seeker/remove|---|---|---|---|
-|/seeker/resume/add|---|---|---|---|
-|/seeker/resume/list|---|---|---|---|
 |---|---|---|---|---|
-|/offer/join|---|---|---|---|
-|/offer/remove|---|---|---|---|
-|/offer/company/read|---|---|---|---|
+|/seeker/resume/add|GET/POST|form|String|---|
+|/seeker/resume/update|GET/POST|ID|String|---|
+|/seeker/resume/read|GET|ID|String|---|
+|/seeker/resume/list|GET|---|String|---|
+|/seeker/delete|GET/POST|ID|String|---|
 |---|---|---|---|---|
 
 DEPENDENCIES LIST

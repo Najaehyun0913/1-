@@ -62,7 +62,6 @@ END POINT DOC
 |/user/confirmid|GET/POST|NICKNAME POHNE TYPE|String|---|
 |/user/confirmpw|GET/POST|NICKNAME USERNAME PHONE|String|---|
 |---|---|---|---|---|
-|---|---|---|---|---|
 |/seeker/resume/add|GET/POST|form|String|---|
 |/seeker/resume/update|GET/POST|ID|String|---|
 |/seeker/resume/read|GET|ID|String|---|

@@ -104,158 +104,138 @@ ERD[KoreaJobDb]
 
 FILE TREES[JSP/SERVLET]
 --- 
-```
 C:.
-│  .classpath
-│  .gitignore
-│  .project
-│  정리.txt
-│
-├─.settings
-│      .jsdtscope
-│      org.eclipse.core.resources.prefs
-│      org.eclipse.jdt.core.prefs
-│      org.eclipse.wst.common.component
-│      org.eclipse.wst.common.project.facet.core.xml
-│      org.eclipse.wst.jsdt.ui.superType.container
-│      org.eclipse.wst.jsdt.ui.superType.name
-│
+├─.gradle
+│  ├─8.7
+│  │  ├─checksums
+│  │  ├─dependencies-accessors
+│  │  ├─executionHistory
+│  │  ├─expanded
+│  │  ├─fileChanges
+│  │  ├─fileHashes
+│  │  └─vcsMetadata
+│  ├─buildOutputCleanup
+│  └─vcs-1
+├─.idea
+├─gradle
+│  └─wrapper
+├─out
+│  └─production
+│      ├─classes
+│      │  └─com
+│      │      └─example
+│      │          ├─app
+│      │          │  └─controller
+│      │          └─jobKoreaIt
+│      │              ├─config
+│      │              │  └─auth
+│      │              │      ├─exceptionHandler
+│      │              │      ├─jwt
+│      │              │      ├─loginHandler
+│      │              │      ├─logoutHandler
+│      │              │      └─provider
+│      │              ├─controller
+│      │              │  └─user
+│      │              │      ├─offer
+│      │              │      └─seeker
+│      │              ├─domain
+│      │              │  ├─common
+│      │              │  │  ├─dto
+│      │              │  │  ├─entity
+│      │              │  │  ├─repository
+│      │              │  │  └─service
+│      │              │  ├─offer
+│      │              │  │  ├─dto
+│      │              │  │  ├─entity
+│      │              │  │  ├─repository
+│      │              │  │  └─service
+│      │              │  └─seeker
+│      │              │      ├─dto
+│      │              │      ├─entity
+│      │              │      ├─repository
+│      │              │      └─service
+│      │              └─properties
+│      └─resources
+│          ├─static
+│          │  ├─assets
+│          │  ├─css
+│          │  │  ├─community
+│          │  │  ├─mobile
+│          │  │  └─user
+│          │  └─js
+│          │      ├─community
+│          │      └─user
+│          └─templates
+│              ├─community
+│              ├─fragments
+│              ├─offer
+│              │  └─company
+│              ├─seeker
+│              │  └─resume
+│              └─user
 └─src
-    └─main
-        ├─java
-        │  └─com
-        │      └─example
-        │          └─app
-        │              ├─controller
-        │              │  │  FrontController.java
-        │              │  │  HomeController.java
-        │              │  │  SubController.java
-        │              │  │
-        │              │  └─user
-        │              │      │  UserJoinController.java
-        │              │      │  UserLoginController.java
-        │              │      │  UserLogoutController.java
-        │              │      │
-        │              │      ├─offer
-        │              │      │      OfferCompanyReadController.java
-        │              │      │      OfferJoinController.java
-        │              │      │      OfferRemoveController.java
-        │              │      │
-        │              │      └─seeker
-        │              │              SeekerJoinController.java
-        │              │              SeekerRemoveController.java
-        │              │              SeekerResumeAddController.java
-        │              │              SeekerResumeListController.java
-        │              │
-        │              ├─domain
-        │              │  ├─common
-        │              │  │  ├─dao
-        │              │  │  │  │  DaoFunctionHeaderNaming.java
-        │              │  │  │  │  SessionDao.java
-        │              │  │  │  │  SessionDaoImpl.java
-        │              │  │  │  │  UserDao.java
-        │              │  │  │  │  UserDaoImpl.java
-        │              │  │  │  │
-        │              │  │  │  └─connectionPool
-        │              │  │  │          CommonDao.java
-        │              │  │  │          ConnectionPool.java
-        │              │  │  │
-        │              │  │  ├─dto
-        │              │  │  │      SessionDto.java
-        │              │  │  │      UserDto.java
-        │              │  │  │
-        │              │  │  └─service
-        │              │  │          UserService.java
-        │              │  │          UserServiceImpl.java
-        │              │  │
-        │              │  ├─offer
-        │              │  │  ├─dao
-        │              │  │  │      OfferDaoImpl.java
-        │              │  │  │
-        │              │  │  ├─dto
-        │              │  │  │      OfferDto.java
-        │              │  │  │
-        │              │  │  └─service
-        │              │  │          OfferServiceImpl.java
-        │              │  │
-        │              │  └─seeker
-        │              │      ├─dao
-        │              │      │      SeekerDaoImpl.java
-        │              │      │
-        │              │      ├─dto
-        │              │      │      SeekerDto.java
-        │              │      │
-        │              │      └─service
-        │              │              SeekerServiceImpl.java
-        │              │
-        │              ├─filter
-        │              │      RememberMeFilter.java
-        │              │      UTF_8_EncodingFilter.java
-        │              │
-        │              └─type
-        │                      ROLE.java
-        │
-        └─webapp
-            ├─META-INF
-            │      context.xml
-            │      MANIFEST.MF
-            │
-            ├─resources
-            │  └─static
-            │      ├─assets
-            │      │      logo.gif
-            │      │
-            │      ├─css
-            │      │  │  common.css
-            │      │  │
-            │      │  └─user
-            │      │          join.css
-            │      │          login.css
-            │      │
-            │      ├─js
-            │      │  │  common.js
-            │      │  │  index.js
-            │      │  │
-            │      │  └─user
-            │      │          join.js
-            │      │          login.js
-            │      │
-            │      └─jsp
-            │              footer.jsp
-            │              link.jsp
-            │              nav.jsp
-            │              topHeader.jsp
-            │
-            └─WEB-INF
-                │  web.xml
-                │
-                ├─lib
-                │      commons-logging-1.3.1.jar
-                │      gson-2.10.1.jar
-                │      HikariCP-5.1.0.jar
-                │      jackson-databind-2.17.0.jar
-                │      jackson-dataformat-xml-2.17.0.jar
-                │      json-simple-1.1.1.jar
-                │      jstl-1.2.jar
-                │      logback-classic-1.5.3.jar
-                │      mysql-connector-j-8.3.0.jar
-                │      slf4j-api-2.0.12.jar
-                │      spring-security-crypto-3.2.10.RELEASE.jar
-                │
-                └─view
-                    │  index.jsp
-                    │  template.jsp
-                    │  template_aside.jsp
-                    │
-                    ├─offer
-                    │      companyRead.jsp
-                    │
-                    ├─seeker
-                    │  └─resume
-                    │          add.jsp
-                    │
-                    └─user
+    ├─main
+    │  ├─generated
+    │  ├─java
+    │  │  └─com
+    │  │      └─example
+    │  │          └─jobKoreaIt
+    │  │              ├─config
+    │  │              │  └─auth
+    │  │              │      ├─exceptionHandler
+    │  │              │      ├─jwt
+    │  │              │      ├─loginHandler
+    │  │              │      ├─logoutHandler
+    │  │              │      └─provider
+    │  │              ├─controller
+    │  │              │  └─user
+    │  │              │      ├─offer
+    │  │              │      └─seeker
+    │  │              ├─domain
+    │  │              │  ├─common
+    │  │              │  │  ├─dto
+    │  │              │  │  ├─entity
+    │  │              │  │  ├─repository
+    │  │              │  │  └─service
+    │  │              │  ├─offer
+    │  │              │  │  ├─dto
+    │  │              │  │  ├─entity
+    │  │              │  │  ├─repository
+    │  │              │  │  └─service
+    │  │              │  └─seeker
+    │  │              │      ├─dto
+    │  │              │      ├─entity
+    │  │              │      ├─repository
+    │  │              │      └─service
+    │  │              └─properties
+    │  └─resources
+    │      ├─static
+    │      │  ├─assets
+    │      │  ├─css
+    │      │  │  ├─community
+    │      │  │  ├─mobile
+    │      │  │  └─user
+    │      │  └─js
+    │      │      ├─community
+    │      │      └─user
+    │      └─templates
+    │          ├─community
+    │          ├─fragments
+    │          ├─offer
+    │          │  └─company
+    │          ├─seeker
+    │          │  └─resume
+    │          └─user
+    └─test
+        └─java
+            └─com
+                └─example
+                    └─jobKoreaIt
+                        └─domain
+                            └─seeker
+                                └─repository
                             join.jsp
                             login.jsp
 ```
+---
 

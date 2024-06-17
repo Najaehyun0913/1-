@@ -76,11 +76,18 @@ DEPENDENCIES LIST
 ---
 |CAT|NAME|DESCRIPTION|LINK|-|-|
 |-|-|-|-|-|-|
-|FN|-|-|-|-|-|
-|FN|-|-|-|-|-|
-|BN|-|-|-|-|-|
-|BN|-|-|-|-|-|
-|DB|-|-|-|-|-|
+|FN|WEB|BOOT WEB|org.springframework.boot:spring-boot-starter-web|-|-|
+|FN|THYMELEAF|THYMELEAF|org.springframework.boot:spring-boot-starter-thymeleaf|-|-|
+|BN|LOMBOK|LOMBOK|org.projectlombok:lombok|-|-|
+|BN|SPRING_SECURITY|SPRING_SECURITY|org.springframework.boot:spring-boot-starter-security|-|-|
+|BN|SECURITY+THYMELEAF|SECURITY+THYMELEAF|org.thymeleaf.extras:thymeleaf-extras-springsecurity6|-|-|
+|BN|ORM_JPA|ORM_JPA|org.springframework.boot:spring-boot-starter-data-jpa|-|-|
+|BN|MAIL|MAIL|org.springframework.boot:spring-boot-starter-mail|-|-|
+|BN|DEVTOOLS|org.springframework.boot:spring-boot-devtools|org.springframework.boot:spring-boot-devtools|-|-|
+|BN|VALIDATOR|org.springframework.boot:spring-boot-starter-validation|org.springframework.boot:spring-boot-starter-validation|-|-|
+|BN|OAUTH2-Client|org.springframework.boot:spring-boot-starter-oauth2-client|org.springframework.boot:spring-boot-starter-oauth2-client|-|-|
+|BN|TX|TX|org.springframework:spring-tx|-|-|
+|DB|DBCONN BASIC|DBCONN BASIC|org.springframework.boot:spring-boot-starter-jdbc|-|-|
 |DEVOPS|-|-|-|-|-|
 
 

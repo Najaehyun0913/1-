@@ -80,9 +80,9 @@ DEPENDENCIES LIST
 |BN|SECURITY+THYMELEAF|SECURITY+THYMELEAF|org.thymeleaf.extras:thymeleaf-extras-springsecurity6|-|-|
 |BN|ORM_JPA|ORM_JPA|org.springframework.boot:spring-boot-starter-data-jpa|-|-|
 |BN|MAIL|MAIL|org.springframework.boot:spring-boot-starter-mail|-|-|
-|BN|DEVTOOLS|org.springframework.boot:spring-boot-devtools|org.springframework.boot:spring-boot-devtools|-|-|
-|BN|VALIDATOR|org.springframework.boot:spring-boot-starter-validation|org.springframework.boot:spring-boot-starter-validation|-|-|
-|BN|OAUTH2-Client|org.springframework.boot:spring-boot-starter-oauth2-client|org.springframework.boot:spring-boot-starter-oauth2-client|-|-|
+|BN|DEVTOOLS|DEVTOOLS|org.springframework.boot:spring-boot-devtools|-|-|
+|BN|VALIDATOR|VALIDATOR|org.springframework.boot:spring-boot-starter-validation|-|-|
+|BN|OAUTH2-Client|OAUTH2-Client|org.springframework.boot:spring-boot-starter-oauth2-client|-|-|
 |BN|TX|TX|org.springframework:spring-tx|-|-|
 |DB|DBCONN BASIC|DBCONN BASIC|org.springframework.boot:spring-boot-starter-jdbc|-|-|
 |DEVOPS|-|-|-|-|-|

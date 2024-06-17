@@ -29,9 +29,9 @@ MEMBERERS
 |---|---|---|---|
 |정우균|FN| FrontController / Docment 관리 / Dependencies  관리 |---|
 |최원준|FN| 모든PAGE와 서버간 REQ / RESP |---|
-|나재현|BN| OFFER - 회원가입 / 회원탈퇴 / 기업정보 CRUD|---|
-|이동환|BN| 유저공통 - 로그인 / 로그아웃|---|
-|박정현|BN| SEEKER 회원가입 회원탈퇴 이력서 CRUD|---|
+|나재현|BN| 유저공통 - ID찾기 / PW찾기 / 회원가입 유효성검사 |---|
+|이동환|BN| SEEKER 이력서 CRUD / 공지사항 CRUD |---|
+|박정현|BN| OFFER 기업정보 CRUD / 기업공고 CRUD |---|
 
 SKILLS
 ---

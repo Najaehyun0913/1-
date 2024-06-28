@@ -6,11 +6,11 @@
 }
 
 .main-block{
-	height : 400px;
+	height : 450px;
 	width : 400px;	
 	border : 1px solid gray;
 	border-radius : 5px;
-	margin : 0 auto;
+	margin : 100px auto;
 	
 	
 }

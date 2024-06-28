@@ -27,16 +27,15 @@ public class OfferRemoveController implements SubController {
 	                request.getRequestDispatcher("/WEB-INF/view/offer/remove.jsp").forward(request, response);
 	                return;
 	            }
-	            String offername = request.getParameter("offername");
-	            
-	            boolean success = offerServiceImpl.remove(offername);
+	            String offerId = request.getParameter("offerId");
+	            boolean success = false;
+	            //boolean success = offerServiceImpl.remove(offerId);
 	            if (success) {
 	                response.sendRedirect(request.getContextPath() + "/main");
 	            } else {
 	                request.setAttribute("errorMessage", "회원 탈퇴에 실패하였습니다.");
 	                request.getRequestDispatcher("/WEB-INF/view/offer/remove.jsp").forward(request, response);
-	            }	            
-	           
+	            }
 
 	        } catch (Exception e) {
 	            e.printStackTrace();
